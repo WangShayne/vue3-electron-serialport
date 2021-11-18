@@ -1,0 +1,56 @@
+{
+    "name": "vue3",
+    "version": "0.1.0",
+    "private": true,
+    "main": "background.js",
+    "scripts": {
+        "lint": "vue-cli-service lint",
+        "build": "vue-cli-service electron:build",
+        "serve": "vue-cli-service electron:serve",
+        "postinstall": "electron-rebuild;electron-builder install-app-deps",
+        "postuninstall": "electron-builder install-app-deps",
+        "rebuild": "./node_modules/.bin/electron-rebuild.cmd -f -w serialport"
+    },
+    "dependencies": {
+        "@vicons/ionicons5": "^0.11.0",
+        "core-js": "^3.6.5",
+        "iconv-lite": "^0.6.3",
+        "naive-ui": "^2.20.3",
+        "serialport": "^9.2.0",
+        "vfonts": "^0.1.0",
+        "vue": "^3.2.6",
+        "vuex": "^4.0.2"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "@vue/compiler-sfc": "^3.0.0",
+        "babel-eslint": "^10.1.0",
+        "electron": "^13.2.3",
+        "electron-devtools-installer": "^3.2.0",
+        "electron-rebuild": "^3.2.2",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^7.0.0",
+        "vue-cli-plugin-electron-builder": "^2.1.1"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/vue3-essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {}
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
+}
